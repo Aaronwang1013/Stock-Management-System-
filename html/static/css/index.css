@@ -1,0 +1,82 @@
+/* 清除頁面元素默認樣式 */
+/* 清除內外邊距 */
+body, h1 ,h2 ,h3 ,h4 ,h5, h6 , ul,ol,li{
+        padding: 0;
+        margin: 0;
+}
+
+ul , ol{
+        list-style: none;
+}
+
+/* 取消默認底線 */
+a,a:hover{
+        text-decoration: none;
+}
+
+
+/* 頁頭 */
+
+header{
+        width: 100%;
+        background-color: #555;
+
+}
+
+nav{
+        width: 1140px;
+        height: 80px;
+        margin: 0 auto;
+        line-height: 80px;
+        /* 為後面使用到的元素做定位 */
+        position: relative;
+}
+
+
+
+#logo {
+        float: left;
+        font-size: 26px;
+
+}
+
+#logo>a {
+        color: #20C4C9;
+}
+
+.nav_list{
+        float: left;
+        margin-left: 80px;
+}
+
+.nav_list li{
+        float: left;
+        padding: 0 20px;
+
+}
+
+.nav_list li a{
+        color : #e5f2f2
+}
+
+.nav_list li a:hover{
+        color:#fff;
+}
+
+/* 登陸註冊 */
+/* .user_btn a{
+        position: absolute;
+        color: #e5f2f2;
+} */
+
+#login{
+        right: 50px;
+        color: #e5f2f2;
+        position: absolute;
+}
+
+#register{
+        right: 0px ;
+        position: absolute;
+        color: #e5f2f2;
+}
