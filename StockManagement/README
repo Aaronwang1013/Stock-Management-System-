@@ -1,0 +1,9 @@
+# Build Django project
+django-admin startproject mysite3
+
+##修改配置文件
+#先將MIDDLEWARE內的csrf註釋調(和post相關 會報error)
+
+##TEMPLATE配置修改
+
+#create views.py

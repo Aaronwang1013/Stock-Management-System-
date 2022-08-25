@@ -17,17 +17,23 @@ class BS:
         self.url = 'http://fubon-ebrokerdj.fbs.com.tw/Z/ZG/{}.djhtm'
         self.headers = {'UserAgent': 'rawUa: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 Safari/537.36'}
 
-        
+    ##acquire entire html 
+    ##extract usage information and sort as dataframe
     def get_BS(self , url):
         html = requests.get(url = url , headers = self.headers).content.decode('big5','replace')
-        return html
+        # return html
+        stock_regex = '<td class="t3t1">(.*?)</td>'
+        stock_pattern = re.compile(stock_regex , re.S)
+        # stock = stock_pattern.findall(html)
+        # return stock
+
+    ##require date information
     def get_date(self , html):
         date_regex = '<div class="t11">(.*?)</td></tr>'
         date_pattern = re.compile(date_regex , re.S)
         date = date_pattern.findall(html)
         return date
-    def get_stock(self , html):
-        stock_regex = 
+
     def save_data(self , filename , html):
         pass
     def run(self):
@@ -40,6 +46,8 @@ class BS:
         html = self.get_BS(url = url)
         date = self.get_date(html =html)
         print(date)
+        print(url)
+        print(html)
 
 if __name__ == "__main__":
     bs = BS()

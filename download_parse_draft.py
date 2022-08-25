@@ -15,6 +15,9 @@ def print_intro():
     print('下載每個月的資料要花5秒（太頻繁會被證交所封鎖IP），建議可從2018開始分析，分析時間越久下載檔案會越久！')
 
 
+def get_multipl_stock_price():
+    pass
+
 def get_stock_prices(Stock_No: str, year: str, month: str):
     """ To get trading infos about target stock from TW證交所 
     through get method and parse to dataframe.
@@ -111,6 +114,7 @@ def download_stock(Stock_No: str, from_: str):
     t2 = time.time()
     print('downloaded')
     print('Time cost :', str(round(t2-t1, 4)), 'seconds')
+
 
 
 if __name__ == '__main__':
