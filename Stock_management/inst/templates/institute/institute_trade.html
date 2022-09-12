@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>id</th>
+            <th>stock_code</th>
+            <th>stock_name</th>
+            <th>QFII_BUY</th>
+            <th>QFII_SELL</th>
+        </tr>
+        {% for stock in institute_trade %}
+            <tr>
+                <td>{{ inst_institute.id }}</td>
+                <td>{{ inst_institute.stock_code }}</td>
+                <td>{{ inst_institute.stock_name }}</td>
+                <td>{{ inst_institute.QFII_BUY }}</td>
+                <td>{{ inst_institute.QFII_SELL }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
